@@ -1,0 +1,157 @@
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 2rem;
+}
+
+header,
+form {
+  text-align: center;
+  min-height: 10vh;
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  padding: 0.3rem;
+  font-size: 2rem;
+  border: 0;
+}
+
+form input:focus {
+  outline: none;
+}
+
+.filter-todo {
+  padding: 1rem;
+}
+
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: 0;
+  color: #ff6f47;
+  background: white;
+  transition: all 0.3s ease-in;
+}
+
+form button:hover {
+  background: #ff6f47;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  align-items: center;
+  background: white;
+  color: black;
+  margin: 0.5rem;
+  transition: all 1s ease;
+}
+
+.todo li {
+  flex: 1;
+  margin-left: 0.5rem;
+}
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0.5;
+}
+
+.todo-completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.todo-list {
+  list-style: none;
+  min-width: 55%;
+}
+
+.complete-btn,
+.trash-btn,
+.edit-btn {
+  padding: 0.8rem;
+  border: 0;
+}
+
+.complete-btn {
+  background: aquamarine;
+  color: white;
+}
+
+.trash-btn {
+  background: #ff6f47;
+  color: white;
+}
+
+.edit-input {
+  border: none;
+}
+
+.edit-input:focus {
+  border: 0;
+  outline: none;
+}
+
+.edit-btn {
+  background: rgb(122, 108, 218);
+  color: white;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  padding: 1rem;
+  border: 0;
+  width: 14rem;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  padding: 1rem;
+  background: #ff6f47;
+}
